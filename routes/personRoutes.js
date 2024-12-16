@@ -104,5 +104,5 @@ router.put('/:id', async (req, res) => {
     }
 
 });
-
+// you need to import this router to another file where you want to use
 module.exports = router;
