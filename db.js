@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+ require('dotenv').config();
 // database uri to coonrct with database server.
-const mongoURI ='mongodb://127.0.0.1:27017/hoteldb';
-
+const mongoURL ='mongodb://127.0.0.1:27017/hoteldb';
+//const mongoURL = process.env.MONGODB_URL_LOCAL;
 
 // sut up mongoDb connnection
-mongoose.connect(mongoURI,{
+mongoose.connect(mongoURL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
