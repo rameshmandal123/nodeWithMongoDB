@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
         const response = await newPerson.save();
         console.log('data saved');
         res.status(200).json({ success: true, message: 'Person Saved !', data: response });
-    } catch (erroe) {
+    } catch (error) {
         res.status(404).json({ success: false, message: 'Person Not saved !', error: error.message });
 
     }
